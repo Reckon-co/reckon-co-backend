@@ -1,4 +1,4 @@
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, ConfigDict
 from typing import List, Optional
 from datetime import datetime
 from uuid import UUID
@@ -21,37 +21,27 @@ class FuzzRunCreate(BaseModel):
 class FuzzRunResponse(BaseModel):
     run_id: UUID
 
-class FuzzRunDetail(BaseModel):
+class FuzzRunRecord(BaseModel):
     id: UUID
     project_id: UUID
     commit_sha: str
     started_at: datetime
     finished_at: datetime
     iterations: int
-    coverage_pct: Optional[float] = None
-    created_at: datetime
+    coverage_pct: Optional[float]
+    model_config = ConfigDict(from_attributes=True)
 
-    class Config:
-        from_attributes = True
-
-class FuzzRunsPaginated(BaseModel):
-    items: List[FuzzRunDetail]
-    next_cursor: Optional[int] = None
-
-class CoverageTrendItem(BaseModel):
+class CoverageTrend(BaseModel):
     commit_sha: str
     date: datetime
-    coverage_pct: Optional[float] = None
+    coverage_pct: Optional[float]
 
-class CrashDetail(BaseModel):
+class CrashRecord(BaseModel):
     id: UUID
-    fuzz_run_id: UUID
     target_fn: str
     severity: str
     dedup_hash: str
     status: str
-    reproducer_path: Optional[str] = None
+    reproducer_path: Optional[str]
     first_seen_at: datetime
-
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
