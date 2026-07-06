@@ -61,6 +61,52 @@ The API will be available at `http://127.0.0.1:8000`. You can access the interac
 - `GET /api/v1/projects/{owner}/{repo}/coverage-trend` - Get the coverage trend.
 - `GET /api/v1/projects/{owner}/{repo}/badge` - Get an SVG badge for the repository.
 
+## Contributing
+
+We welcome contributions from the open-source community! Whether you want to fix a bug, add a feature, or improve documentation, your help is appreciated.
+
+### How to Contribute
+
+1. **Fork the Repository:** Start by forking this repository to your GitHub account using the "Fork" button.
+2. **Clone Locally:** Clone your forked repository to your local machine.
+   ```bash
+   git clone https://github.com/your-username/reckon-co-backend.git
+   ```
+3. **Create a Branch:** Create a new branch for your feature or bug fix. Please use descriptive branch names.
+   ```bash
+   git checkout -b feature/my-awesome-feature
+   # or
+   git checkout -b fix/issue-123
+   ```
+4. **Make Your Changes:** Implement your feature or bug fix. Ensure your code follows the existing style conventions.
+5. **Test Your Code:** Verify that your changes do not break existing functionality. Run the local development server and ensure everything works smoothly.
+6. **Commit Your Changes:** Write clear, concise commit messages.
+   ```bash
+   git commit -m "Add feature X"
+   ```
+7. **Push to Your Fork:**
+   ```bash
+   git push origin feature/my-awesome-feature
+   ```
+8. **Submit a Pull Request:** Open a pull request against the `master` branch of the original repository. Describe your changes in detail and link any related issues.
+
+### Reporting Bugs
+
+If you find a bug, please open an issue in the issue tracker. Include the following information:
+- A clear and descriptive title.
+- Steps to reproduce the bug.
+- Expected vs. actual behavior.
+- Relevant logs, screenshots, or code snippets.
+- Your environment (e.g., OS, Python version).
+
+### Suggesting Enhancements
+
+Got an idea for a new feature? We'd love to hear it! Open an issue to discuss your proposal before starting development to ensure it aligns with the project's goals.
+
+### Code of Conduct
+
+By participating in this project, you are expected to uphold our Code of Conduct. Please treat all maintainers and contributors with respect, maintain a welcoming environment for everyone, and engage constructively in discussions.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
